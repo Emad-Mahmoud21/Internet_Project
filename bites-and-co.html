@@ -6,7 +6,7 @@
   <title>Bites & Co. — Food Station</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   /* the line above is for the fonts used in the page */
-  
+  /* bites & co means bites and its cooperators, it's a name for a food station that serves different types of food */
  <style>
     /* ===== COLORS ===== */
     :root { /* root is the CSS variable container */
@@ -35,7 +35,7 @@
       position: fixed; top: 0; left: 0; right: 0;
       /*z-index: 999; */
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between;/* مسافات متساوية بين العناصر في الشريط */
       align-items: center;
       padding: 18px 60px;
       background: var(--deep-brown);
@@ -68,19 +68,19 @@
       background: var(--gold);
       color: var(--deep-brown);
       font-weight: 500;
-      padding: 7px 18px;
+      padding: 7px 18px;/* بيخلي الزر أصغر شوي عشان يناسب عدد العناصر في الكارت */
       border-radius: 25px;
       border: none;
       cursor: pointer;
       font-family: 'DM Sans', sans-serif;
       font-size: 0.9rem;
-      transition: background 0.2s;
+      transition: background 0.2s;/* دي بتخلي تغير اللون في الزر بسلاسة لما تحوم عليه */
     }
     #cart-btn:hover { background: var(--orange); color: var(--white); }
 
     /* ===== PAGE SYSTEM ===== */
-    .page { display: none; padding-top: 75px; min-height: 100vh; }
-    .page.active { display: block; }
+    .page { display: none; padding-top: 75px; min-height: 100vh; }/* كل صفحة مخفية بشكل افتراضي، والصفحة النشطة فقط تظهر */
+    .page.active { display: block; }/* كل صفحة مخفية بشكل افتراضي، والصفحة النشطة فقط تظهر */
 
     /* ===== HERO SECTION ===== */
     .hero { /* home page hero section with big title and image */
@@ -107,7 +107,7 @@
 
     .hero-text { max-width: 560px; }
 
-    .hero-tag {
+    .hero-tag {/* العلامة الصغيرة فوق العنوان في الهيرو */
       display: inline-block;
       background: var(--orange);
       color: var(--white);
@@ -195,7 +195,7 @@
       font-size: 2.2rem;
       color: var(--orange);
     }
-     /* الجزء اللي فيه الأرقام الكبيرة في الإحصائيات */
+     /* الجزء اللي فيه التسمية في الإحصائيات */
     .stat-label { font-size: 0.88rem; color: var(--gray-text); margin-top: 4px; }
 
     /* ===== FEATURES SECTION ===== */
@@ -246,7 +246,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.4rem;
       color: var(--cream);
-      margin-bottom: 8px;
+      margin-bottom: 8px;/* بيخلي المسافة بين العنوان والوصف أصغر */
     }
 
     .menu-header p { color: #BCAAA4; font-size: 0.95rem; }
@@ -256,7 +256,7 @@
       justify-content: center;
       gap: 10px;
       padding: 24px 60px;
-      flex-wrap: wrap;
+      flex-wrap: wrap;/* بيخلي أزرار الفلتر تنتقل لسطر جديد لو الشاشة ضيقة */
     }
 
     .filter-btn {
@@ -329,7 +329,7 @@
 
     /* ===== CHECKOUT BAR ===== */
     .checkout-bar {/* الشريط اللي بيظهر في أسفل صفحة المينيو لما تضيف حاجة للكارت */
-      position: sticky;
+      position: sticky;/* بيخلي الشريط يلتصق بأسفل الشاشة لما تنزل تحت في الصفحة */
       bottom: 0;
       background: var(--deep-brown);
       color: var(--cream);
@@ -339,12 +339,12 @@
       align-items: center;
       border-top: 2px solid var(--gold);
     }
-    .checkout-bar.visible { display: flex; }
+    .checkout-bar.visible { display: flex; }/* لما تضيف حاجة للكارت، الشريط بيظهر عن طريق إضافة الكلاس "visible" له */
 
     .checkout-bar span { font-size: 0.95rem; }
     .checkout-bar strong { color: var(--gold); }
 
-    .go-checkout-btn {
+    .go-checkout-btn {/* الزر اللي في شريط الكارت في صفحة المينيو */
       background: var(--orange);
       color: var(--white);
       border: none;
@@ -367,7 +367,7 @@
       margin-bottom: 24px;
     }
 
-    .empty-cart {
+    .empty-cart {/* الرسالة اللي بتظهر لما الكارت يكون فاضي */
       text-align: center;
       padding: 60px 0;
       color: var(--gray-text);
@@ -375,7 +375,7 @@
     }
     .empty-cart .big-emoji { font-size: 3.5rem; display: block; margin-bottom: 14px; }
 
-    .cart-table {
+    .cart-table { /* جدول عرض العناصر في الكارت */
       width: 100%;
 
       border-collapse: collapse;
@@ -421,8 +421,8 @@
     .cart-total span { color: var(--orange); }
 
     .proceed-btn {
-      display: block;
-      margin-left: auto;
+      display: block;/* بيخلي الزر ياخد سطر كامل عشان يكون في اليمين */
+      margin-left: auto;/* بيخلي الزر يلتصق باليمين في حالة كان العرض كبير */
       background: var(--orange);
       color: var(--white);
       border: none;
@@ -619,7 +619,7 @@
   <div id="page-home" class="page active">
     <div class="hero">
       <div class="hero-text">
-        <span class="hero-tag">✦ Open Daily 9am – 11pm</span>
+        <span class="hero-tag">✦ Open Daily 9am – 11pm</span>/* span عبارة عن كونتينر صغير حول النص اللي فيه، بيخلي النص ده يقدر يتنسق بشكل مستقل عن باقي النصوص */
         <h1 class="hero-title">Good Food,<br><span>Great Vibes.</span></h1>
         <p class="hero-desc">
           Welcome to Bites & Co. — your cozy food station where every dish
@@ -714,6 +714,7 @@
       </div>
 
       <table class="cart-table" id="cart-table" style="display:none;">
+        /*id means this table can be accessed and manipulated by JavaScript using the id "cart-table" */
         <thead>
           <tr>
             <th>Item</th>
@@ -805,7 +806,7 @@
   <!-- ===== JAVASCRIPT ===== -->
   <script>
     // Global variables
-    var cart = [];
+    var cart = [];/*array of cart items*/
     var paymentMethod = 'cash';
 
     // Page navigation
